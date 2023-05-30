@@ -25,4 +25,3 @@ class Select
     end
   end
 end
-
