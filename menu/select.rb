@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/CyclomaticComplexity
 class Select
   def initialize
     @app = nil
@@ -25,4 +26,4 @@ class Select
     end
   end
 end
-
+# rubocop:disable Metrics/CyclomaticComplexity
