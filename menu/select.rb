@@ -1,28 +1,22 @@
-class Select
-  def initialize
-    @app = nil
-  end
-
-  def opt_select(opt)
-    case opt
-    when 1
-      @app.add_book
-    when 2
-      @app.add_music_album
-    when 3
-      @app.add_game
-    when 4
-      @app.list_all_books
-    when 5
-      @app.list_all_music_albums
-    when 6
-      @app.list_all_games
-    when 7
+def select_option(opt, app)
+  options = {
+    1 => -> { app.add_book },
+    2 => -> { app.add_music_album },
+    3 => -> { app.add_game },
+    4 => -> { app.list_all_books },
+    5 => -> { app.list_all_music_albums },
+    6 => -> { app.list_all_games },
+    7 => -> { app.list_all_genres },
+    8 => -> { app.list_all_labels },
+    9 => -> { app.list_all_authors },
+    0 => lambda {
       puts 'Thanks for using this app'
       exit
-    else
-      puts 'Option entered is invalid'
-    end
-  end
-end
+    }
+  }
 
+  action = options[opt]
+  return puts 'Option entered is invalid' if action.nil?
+
+  action.call
+end
