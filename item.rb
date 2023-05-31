@@ -8,6 +8,7 @@ class Item
     @publish_date = nil
     @archived = false
     @label = nil
+    @authors = author
     @genre = nil
     @author = nil
     @source = nil
@@ -15,6 +16,11 @@ class Item
 
   def move_to_archive
     @archived = true if can_be_archived?
+  end
+
+  def add_author(author)
+    @authors = author
+    author.items << self unless author.items.include?(self)
   end
 
   private
