@@ -21,7 +21,7 @@ class Item
 
   def can_be_archived?
     begin
-      published_date = Date.parse(@publish_date)
+      publish_date = Date.parse(@publish_date)
     rescue StandardError
       publish_date = nil
     end
@@ -30,5 +30,10 @@ class Item
     else
       (Date.today.year - publish_date.year) > 10
     end
+  end
+
+  def add_genre=(genre)
+    @genre = genre
+    @genre.add_item(self) unless @genre.items.include?(self)
   end
 end
