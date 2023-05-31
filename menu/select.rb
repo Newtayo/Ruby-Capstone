@@ -20,4 +20,3 @@ def select_option(opt, app)
 
   action.call
 end
-
