@@ -26,4 +26,4 @@ class Select
     end
   end
 end
-# rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:enable all
