@@ -1,12 +1,13 @@
 require 'date'
 
 class Item
-  attr_accessor :id, :published_date, :archived, :genre, :author, :source
+  attr_accessor :id, :publish_date, :archived, :genre, :author, :source
   attr_reader :label
+
 
   def initialize(*)
     @id = Random.rand(1..1000)
-    @published_date = nil
+    @publish_date = nil
     @archived = false
     @label = nil
     @genre = nil
@@ -36,5 +37,10 @@ class Item
     else
       (Date.today.year - publish_date.year) > 10
     end
+  end
+
+  def add_genre=(genre)
+    @genre = genre
+    @genre.add_item(self) unless @genre.items.include?(self)
   end
 end
