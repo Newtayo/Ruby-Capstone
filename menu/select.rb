@@ -12,10 +12,6 @@ def select_option(opt, app)
     0 => lambda {
       puts 'Thanks for using this app'
       exit
-    else
-      puts 'Option entered is invalid'
-    end
-  end
     }
   }
 
