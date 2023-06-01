@@ -1,5 +1,6 @@
 require_relative 'menu/list'
 require_relative 'menu/select'
+require_relative 'app'
 
 class Main
   def start
@@ -8,8 +9,9 @@ class Main
     select = Select.new
     loop do
       puts 'Please have an option from above with any number (1-7):::'
-      opt = gets.chomp.to_i
-      select.opt_select(opt)
+      opt = gets.chomp
+      app = App.new
+      select.select_option(opt, app)
     end
   end
 end
