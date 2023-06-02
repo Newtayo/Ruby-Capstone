@@ -12,6 +12,27 @@ class App
   def initialize
     @books = []
     @labels = []
+    @authors = []
+    @games = []
+  end
+
+  def add_game
+    puts 'Add game title:'
+    title = gets.chomp
+    puts 'Add Multiplayer:'
+    multiplayer = gets.chomp
+    puts 'Add last_played_at:'
+    last_played_at = gets.chomp
+    puts 'Add first_name:'
+    first_name = gets.chomp
+    game= Game.new(title, multiplayer, last_played_at,)
+    @games.push(game)
+    author = Author.new(first_name, last_name)
+    author.add_item(author)
+    @author.push(author)
+    puts 'addition done successfully!'
+    SaveGame.new.save_game(game)
+    SaveAuthor.new.save_author(author)
   end
 
   def add_book
@@ -45,5 +66,16 @@ class App
       "Publisher: #{book_item.publisher} || Cover state: #{book_item.cover_state}"
     end
     puts book_store
+  end
+
+  def list_all_games
+    if @games.empty?
+      puts 'No Games found'
+    else
+      puts '# Games'
+      @games.each_with_index do |game, i|
+        puts "#{i + 1}. #{game}"
+      end
+    end
   end
 end

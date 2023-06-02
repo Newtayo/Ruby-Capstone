@@ -24,4 +24,17 @@ class ReadData
     file.close
     label_list
   end
+
+  def read_label
+    game_list = []
+    return game_list unless File.exist?('game.json')
+
+    file = File.open('game.json')
+    data = JSON.parse(file.read)
+    data.each do |label|
+      game_list << Game.new(game['title'], game['mutiplayer'], game['last_player_at'])
+    end
+    file.close
+    game_list
+  end
 end

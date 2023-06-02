@@ -18,4 +18,15 @@ class SaveBook
     label_arr << labelobj
     File.write('label.json', JSON.pretty_generate(label_arr))
   end
+
+  def save_game(game)
+    game_arr = File.empty?('game.json') ? [] : JSON.parse(File.read('game.json'))
+    gameobj = {
+      title: label.title,
+      multiplayer: game.multiplayer,
+      last_played_at: game.last_played_at
+    }
+    game_arr << gameobj
+    File.write('game.json', JSON.pretty_generate(game_arr))
+  end
 end
