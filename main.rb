@@ -4,14 +4,20 @@ require_relative 'app'
 
 class Main
   def start
-    puts 'welcome'
+    puts 'Welcome'
     menu_list
+
     select = Select.new
+    app = App.new
+
+    app.load_data # Load data when opening the program
+
     loop do
-      puts 'Please have an option from above with any number (1-7):::'
+      puts 'Please enter an option from the menu (1-7):'
       opt = gets.chomp
-      app = App.new
       select.select_option(opt, app)
+    ensure
+      app.save_data # Save data when closing the program
     end
   end
 end
