@@ -16,5 +16,4 @@ def select_option(opt, app)
   }
   action = options[opt]
   return puts 'Option entered is invalid' if action.nil? action.call
-
 end
