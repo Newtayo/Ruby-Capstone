@@ -25,7 +25,7 @@ class App
     last_played_at = gets.chomp
     puts 'Add first_name:'
     first_name = gets.chomp
-    game= Game.new(title, multiplayer, last_played_at,)
+    game = Game.new(title, multiplayer, last_played_at)
     @games.push(game)
     author = Author.new(first_name, last_name)
     author.add_item(author)
