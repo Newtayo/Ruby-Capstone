@@ -11,7 +11,6 @@ class Select
       '8' => -> { app.list_all_labels },
       '9' => -> { app.list_all_authors },
       '0' => lambda {
-
         puts 'Thanks for using this app'
         exit
       }
@@ -23,6 +22,5 @@ class Select
     else
       action.call
     end
-
   end
 end
