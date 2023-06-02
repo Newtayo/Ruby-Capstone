@@ -6,11 +6,12 @@ class Main
   def start
     puts 'welcome'
     menu_list
+    app = App.new
     select = Select.new
     loop do
       puts 'Please have an option from above with any number (1-7):::'
       opt = gets.chomp
-      app = App.new
+
       select.select_option(opt, app)
     end
   end

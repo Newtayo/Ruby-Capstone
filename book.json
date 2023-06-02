@@ -1,0 +1,34 @@
+[
+  {
+    "Publisher": "ttt",
+    "cover_state": "ttt"
+  },
+  {
+    "Publisher": "eee",
+    "cover_state": "eee"
+  },
+  {
+    "Publisher": "rrr",
+    "cover_state": "rrr"
+  },
+  {
+    "Publisher": "ttt",
+    "cover_state": "eee"
+  },
+  {
+    "Publisher": "eer",
+    "cover_state": "ee"
+  },
+  {
+    "Publisher": "eee",
+    "cover_state": "eee"
+  },
+  {
+    "Publisher": "eee",
+    "cover_state": "ee"
+  },
+  {
+    "Publisher": "eeee",
+    "cover_state": "rrr"
+  }
+]
