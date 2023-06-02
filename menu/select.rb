@@ -15,7 +15,6 @@ class Select
         exit
       }
     }
-
     action = options[opt]
     if action.nil?
       puts 'Option entered is invalid'
