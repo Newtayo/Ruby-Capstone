@@ -12,15 +12,8 @@ def select_option(opt, app)
     0 => lambda {
       puts 'Thanks for using this app'
       exit
-    else
-      puts 'Option entered is invalid'
-    end
-  end
     }
   }
-
   action = options[opt]
-  return puts 'Option entered is invalid' if action.nil?
-
-  action.call
+  return puts 'Option entered is invalid' if action.nil? action.call
 end

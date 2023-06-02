@@ -27,7 +27,7 @@ class Item
 
   def can_be_archived?
     begin
-      published_date = Date.parse(@publish_date)
+      Date.parse(@publish_date)
     rescue StandardError
       publish_date = nil
     end
