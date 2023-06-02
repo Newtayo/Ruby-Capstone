@@ -22,11 +22,20 @@ class SaveBook
   def save_game(game)
     game_arr = File.empty?('game.json') ? [] : JSON.parse(File.read('game.json'))
     gameobj = {
-      title: label.title,
       multiplayer: game.multiplayer,
       last_played_at: game.last_played_at
     }
     game_arr << gameobj
     File.write('game.json', JSON.pretty_generate(game_arr))
+  end
+
+  def save_author(author)
+    author_arr = File.empty?('author.json') ? [] : JSON.parse(File.read('author.json'))
+    authorobj = {
+      first_name: author.first_name,
+      last_name: author.last_name
+    }
+    author_arr << authorobj
+    File.write('author.json', JSON.pretty_generate(author_arr))
   end
 end

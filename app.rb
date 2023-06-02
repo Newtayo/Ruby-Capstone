@@ -17,22 +17,32 @@ class App
   end
 
   def add_game
-    puts 'Add game title:'
-    title = gets.chomp
-    puts 'Add Multiplayer:'
-    multiplayer = gets.chomp
+    puts 'Is it a multiplayer game [Y/N]:'
+    choice = gets.chomp.upcase
+    multiplayer = nil
+
+    case choice
+    when 'Y'
+      multiplayer = 'Yes'
+    when 'N'
+      multiplayer = 'No'
+    else
+      puts 'Invalid input'
+      return
+    end
     puts 'Add last_played_at:'
     last_played_at = gets.chomp
     puts 'Add first_name:'
     first_name = gets.chomp
-    game = Game.new(title, multiplayer, last_played_at)
+    puts 'Add last_name:'
+    last_name = gets.chomp
+    game = Game.new(multiplayer, last_played_at)
     @games.push(game)
     author = Author.new(first_name, last_name)
-    author.add_item(author)
-    @author.push(author)
+    @authors.push(author)
     puts 'addition done successfully!'
-    SaveGame.new.save_game(game)
-    SaveAuthor.new.save_author(author)
+    SaveBook.new.save_game(game)
+    SaveBook.new.save_author(author)
   end
 
   def add_book
@@ -69,13 +79,18 @@ class App
   end
 
   def list_all_games
-    if @games.empty?
-      puts 'No Games found'
-    else
-      puts '# Games'
-      @games.each_with_index do |game, i|
-        puts "#{i + 1}. #{game}"
-      end
+    @games = ReadData.new.read_game
+    game_store = @games.map do |game_item|
+      "Multiplayer: #{game_item.multiplayer} || Last Played at: #{game_item.last_played_at}"
     end
+    puts game_store
+  end
+
+  def list_all_authors
+    @authors = ReadData.new.read_author
+    author_store = @authors.map do |author_item|
+      "First Name: #{author_item.first_name} || Last name: #{author_item.last_name}"
+    end
+    puts author_store
   end
 end

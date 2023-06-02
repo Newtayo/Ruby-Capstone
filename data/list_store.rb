@@ -31,10 +31,23 @@ class ReadData
 
     file = File.open('game.json')
     data = JSON.parse(file.read)
-    data.each do |_label|
-      game_list << Game.new(game['title'], game['mutiplayer'], game['last_player_at'])
+    data.each do |game|
+      game_list << Game.new(game['multiplayer'], game['last_played_at'])
     end
     file.close
     game_list
+  end
+
+  def read_author
+    author_list = []
+    return author_list unless File.exist?('author.json')
+
+    file = File.open('author.json')
+    data = JSON.parse(file.read)
+    data.each do |author|
+      author_list << Author.new(author['first_name'], author['last_name'])
+    end
+    file.close
+    author_list
   end
 end
