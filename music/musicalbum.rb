@@ -8,8 +8,6 @@ class MusicAlbum < Item
     @publish_date = publish_date
   end
 
-  private
-
   def can_be_archived?
     super && @on_spotify
   end
