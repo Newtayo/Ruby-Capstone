@@ -1,6 +1,5 @@
 require_relative '../music/genre'
 require_relative '../item'
-require 'rspec'
 
 describe Genre do
   let(:genre) { Genre.new('Science Fiction') }
