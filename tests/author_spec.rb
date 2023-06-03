@@ -24,7 +24,7 @@ RSpec.describe Author do
 
     it 'adds the author to the item\'s list of authors' do
       expect(item).to receive(:add_author).with(author)
-      author.add_item(item)
+      author.add_items(item)
     end
   end
 
