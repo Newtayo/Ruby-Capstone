@@ -13,8 +13,8 @@ class Author
   end
 
   def add_item(item)
-    @items.push(item)
-    item.add_author(self)
+    items << item
+    item.author = self if item.author != self
   end
 
   def full_name

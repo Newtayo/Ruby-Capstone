@@ -8,8 +8,9 @@ require_relative './preserve_data'
 require_relative 'data/store_book'
 require_relative 'data/list_store'
 require 'json'
-class App
+class App < PreserveData
   def initialize
+    super()
     @books = []
     @labels = []
     @authors = []
