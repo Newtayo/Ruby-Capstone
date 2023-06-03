@@ -17,6 +17,11 @@ class Author
     item.author = self if item.author != self
   end
 
+  def add_items(item)
+    @items.push(item)
+    item.add_author(self)
+  end
+
   def full_name
     "#{@first_name} #{@last_name}"
   end
