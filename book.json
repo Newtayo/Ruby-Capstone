@@ -18,5 +18,9 @@
   {
     "Publisher": "REVEIWER",
     "cover_state": "LAST REVIEWER"
+  },
+  {
+    "Publisher": "book",
+    "cover_state": "good"
   }
 ]

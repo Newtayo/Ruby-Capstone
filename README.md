@@ -47,7 +47,7 @@ In this project, We built a console app that stores books, label, music albums, 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://drive.google.com/file/d/1ONBwtug8HgDCt2sMT0WAMFIaIS594XkS/view?usp=sharing)
+- [Live Demo Link](https://drive.google.com/file/d/1L9hna1WEDODUbf6dDOwctaoWvLJZZ6P-/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
