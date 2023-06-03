@@ -27,16 +27,15 @@ In this project, We built a console app that stores books, label, music albums, 
 [📖 Catalog of my things] use functionality of classes and objects in Ruby, Implement encapsulation and inheritance with Ruby and Run a program using the command line.
 
 ## 🛠 Built With <a name="built-with"></a>
-```sh 
-Ruby
-```
 
 ### Tech Stack <a name="tech-stack"></a>
-``` sh
-Ruby
-```
-
-<!-- Features -->
+- Ruby
+<details>
+  <summary>Language</summary>
+  <ul>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+</details>
 
 ### Key Features <a name="key-features"></a>
 
@@ -46,6 +45,12 @@ Ruby
 - Add a Games with authors👌
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://drive.google.com/file/d/1ONBwtug8HgDCt2sMT0WAMFIaIS594XkS/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -69,7 +74,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  https://github.com/brhanuhailu/school-library.git
+  https://github.com/Newtayo/Ruby-Capstone.git
 ```
 
 
@@ -79,7 +84,7 @@ To run the project, execute the following command:
 
 
 ```sh
-  Ruby school-library/filename.rb
+  Ruby Ruby-Capstone/main.rb
 ```
 
 
@@ -133,7 +138,7 @@ Feel free to check the [issues page](https://github.com/Newtayo/Ruby-Capstone/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
- I am  so excited to accept you feedback to improve my profession.
+ We are so excited to accept you feedback to improve my profession.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,7 +146,7 @@ Feel free to check the [issues page](https://github.com/Newtayo/Ruby-Capstone/is
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and everyone who has contributed to this project
+We would like to thank Microverse and everyone who has contributed to this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
