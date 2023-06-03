@@ -14,5 +14,9 @@
   {
     "Publisher": "Bookie",
     "cover_state": "Good"
+  },
+  {
+    "Publisher": "REVEIWER",
+    "cover_state": "LAST REVIEWER"
   }
 ]
