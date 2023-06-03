@@ -11,6 +11,6 @@ class Genre
 
   def add_item(item)
     items << item
-    item.genre = self if item.genre.include?(self)
+    item.genre = self if item.genre != self
   end
 end
