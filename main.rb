@@ -10,7 +10,7 @@ class Main
     app = App.new
     app.load_data # Load data when opening the program
     loop do
-      puts 'Please have an option from above with any number (1-7):::'
+      puts 'Please have an option from above with any number (0-9):::'
       opt = gets.chomp
       select.select_option(opt, app)
     ensure
