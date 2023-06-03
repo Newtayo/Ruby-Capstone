@@ -17,6 +17,7 @@ class App
     @music_albums = []
     @genres = []
   end
+
   def add_game
     puts 'Is it a multiplayer game [Y/N]:'
     choice = gets.chomp.upcase
@@ -45,7 +46,8 @@ class App
     SaveBook.new.save_game(game)
     SaveBook.new.save_author(author)
   end
-def add_music_album
+
+  def add_music_album
     puts 'Is it on Spotify [Y/N]:'
     choice = gets.chomp.upcase
     on_spotify = nil
@@ -69,16 +71,19 @@ def add_music_album
     @music_albums << music
     @genres << genre
   end
+
   def list_all_music_albums
     album = @music_albums.map do |music_items|
       "On spotify:#{music_items.on_spotify} || publish date:#{music_items.publish_date}"
     end
     puts album
   end
- def list_all_genres
+
+  def list_all_genres
     gen = @genres.map { |genre_items| "Genre Name:#{genre_items.name}" }
     puts gen
   end
+
   def add_book
     puts 'Add Label title:'
     title = gets.chomp
@@ -126,6 +131,5 @@ def add_music_album
       "First Name: #{author_item.first_name} || Last name: #{author_item.last_name}"
     end
     puts author_store
-
   end
 end

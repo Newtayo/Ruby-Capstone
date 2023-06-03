@@ -13,7 +13,7 @@ class Main
       puts 'Please have an option from above with any number (1-7):::'
       opt = gets.chomp
       select.select_option(opt, app)
-      ensure
+    ensure
       app.save_data # Save data when closing the program
     end
   end
